@@ -1,0 +1,15 @@
+main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.25rem;
+  padding: 64px;
+
+  h1 {
+    font-weight: 400;
+  }
+}

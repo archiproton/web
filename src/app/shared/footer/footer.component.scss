@@ -1,0 +1,55 @@
+@use '@angular/material' as mat;
+@use '../../../theme.scss';
+
+$height: 40px;
+$text-size: 12px;
+$color: mat.get-theme-color(theme.$theme, primary, default-contrast);
+$background-color: mat.get-theme-color(theme.$theme, primary, default);
+
+:host {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: $height;
+}
+
+:host ::ng-deep footer {
+  .mat-icon {
+    display: flex;
+    margin-right: 4px;
+    height: $text-size;
+    width: $text-size;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $height;
+  font-size: $text-size;
+  background-color: $background-color;
+  color: $color;
+
+  .links, .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:hover, &:visited {
+      color: $color;
+    }
+  }
+
+  .links a:has(archiproton-icon) {
+    display: flex;
+    align-items: center;
+  }
+}
